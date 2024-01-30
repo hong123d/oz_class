@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습과제</title>
+</head>
+<body>
+     <p id="dday"></p>
+     <p id="now"></p>
+    <script>
+        
+    setInterval(function(){
+        const p = document.getElementById("dday")
+        
+        const dday = new Date("2024/1/13 00:00:00");
+        
+        let year = dday.getFullYear()
+        let month = dday.getMonth() + 1
+        let day = dday.getDate()
+        let hour = dday.getHours()
+        let min = dday.getMinutes()
+        let sec = dday.getSeconds()
+        console.log("dday = " + dday.getTime())
+        p.textContent = `${year}/${month}/${day}/ ${hour}:${min}:${sec}`
+    }, 1000)
+  
+        setInterval(function(){
+            const p = document.getElementById("now")
+
+            const now = new Date()
+
+            let year = now.getFullYear()
+            let month = now.getMonth() + 1
+            let day = now.getDate()
+            let hour = now.getHours()
+            let min = now.getMinutes()
+            let sec = now.getSeconds()
+            console.log("now = " + now.getTime())
+            p.textContent = `${year}/${month}/${day}/ ${hour}:${min}:${sec}`
+        }, 1000)
+    </script>
+</body>
+</html>
